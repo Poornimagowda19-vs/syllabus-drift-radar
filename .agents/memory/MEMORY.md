@@ -1,0 +1,1 @@
+- [Syllabus Drift Radar scope](syllabus-drift-radar-scope.md) — compare syllabus coverage with job descriptions; never compare two syllabus versions.
