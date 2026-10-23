@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Syllabus Drift Radar by Team VeriNexus"
+description = "Offline-first multi-domain curriculum-to-industry skill-gap prototype for ECE, CSE/CS, AI/ML/Data Science, and custom domains; supports illustrative samples, PDF or pasted syllabus text, role taxonomies, evidence, and curriculum suggestions."
+version = "1.0.0"
+id = "artifacts/syllabus-drift-reader"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23384
+
+[services.development]
+run = "pnpm --filter @workspace/syllabus-drift-reader run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/syllabus-drift-reader", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/syllabus-drift-reader/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23384"
+BASE_PATH = "/"
