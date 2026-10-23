@@ -1,2 +1,2 @@
 # syllabus-drift-radar
-A tool to compare syllabus versions and identify topic changes.
+An EdTech tool that compares academic syllabi with industry job descriptions to identify skill gaps and recommend curriculum improvements.
